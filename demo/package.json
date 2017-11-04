@@ -13,6 +13,7 @@
     "angular-ui-sortable": "^0.17.2",
     "jquery": "^3.2.1",
     "jquery-ui-dist": "^1.12.1",
+    "muiv3": "^3.3.0",
     "wangeditor": "2.1.23"
   }
 }

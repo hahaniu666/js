@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function count(x) {
+            var fn = function (y) {
+                return count(x * y);
+            };
+            console.log('fn1',fn);
+            fn.toString = function () {
+                return x;
+            };
+            console.log('fn2',fn);
+
+            return fn;
+        }
+
+        count(1)(3)(7)
+
+        document.write( count(1)(3)(7))
+//        function count() {
+//            var str = 1;
+//            for (var i = 0; i < argumaents.length; i++) {
+//                str *= arguments[i];
+//            }
+//            return str;
+//        }
+//
+//        console.log(count(1, 3, 7));
+
+//
+//        var ret = 1;
+//        function count(a){
+//            ret = ret * a;
+//            return count;
+//        }
+//
+//        var result = count(1)(3)(7)(9);
+//        document.write(ret)
+    });
+</script>
+</body>
+</html>
