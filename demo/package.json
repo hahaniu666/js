@@ -11,8 +11,13 @@
   "dependencies": {
     "angular": "^1.6.6",
     "angular-ui-sortable": "^0.17.2",
+    "arteditor": "^1.0.3",
+    "clipboard": "^1.7.1",
+    "clipboard-js": "^0.3.6",
     "jquery": "^3.2.1",
     "jquery-ui-dist": "^1.12.1",
+    "jquery-ui-sortable": "^1.0.0",
+    "layui-src": "^2.2.1",
     "muiv3": "^3.3.0",
     "wangeditor": "2.1.23"
   }

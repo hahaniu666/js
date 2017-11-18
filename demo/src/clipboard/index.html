@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+</head>
+
+<body>
+<div class="test-area">
+    <input id="taokouling" value="qweq" type="text">
+    <button id="copyCode" class="btn" data-clipboard-target="#taokouling" data-clipboard-action="copy">
+        复制淘口令
+    </button>
+    <script type="text/javascript" src="../../node_modules/clipboard/dist/clipboard.js"></script>
+    <script type="text/javascript" src="./toolips.js"></script>
+
+    <!--<script type="text/javascript" src="http://www.fndroid.cn/clipboard.min.js"></script>-->
+    <script>
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function(e){
+            console.log(e);
+            document.getElementById('copyCode').innerHTML = '复制成功1';
+        });
+        clipboard.on('error', function(e){
+            document.getElementById('copyCode').innerHTML = '复制失败，请长按复制';
+        });
+    </script>
+</div>
+</body>
+</html>

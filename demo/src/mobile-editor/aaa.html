@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor</title>
+    <style type="text/css">
+        #div1 {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="article-content" id="content">
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="index.js"></script>
+<script type="text/javascript">
+
+    $('#content').artEditor({
+        imgTar: '#imageUpload',
+        limitSize: 5,   // 兆
+        showServer: false,
+        uploadUrl: '',
+        data: {},
+        uploadField: 'image',
+        placeholader: '<p>请输入文章正文内容</p>',
+        validHtml: ["br"],
+        uploadSuccess: function (res) {
+            // 这里是处理返回数据业务逻辑的地方
+            // `res`为服务器返回`status==200`的`response`
+            // 如果这里`return <path>`将会以`<img src='path'>`的形式插入到页面
+            // 如果发现`res`不符合业务逻辑
+            // 比如后台告诉你这张图片不对劲
+            // 麻烦返回 `false`
+            // 当然如果`showServer==false`
+            // 无所谓咯
+            return res.path;
+        },
+        uploadError: function (res) {
+            //这里做上传失败的操作
+            //也就是http返回码非200的时候
+            console.log(res);
+        }
+    });
+</script>
+</body>
+</html>
