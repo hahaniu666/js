@@ -12,6 +12,7 @@ plugin.xml
 .sonar
 
 demo/node_modules
+ndoeJs/node_modules
 bower_components
 .sass-cache
 .slcache

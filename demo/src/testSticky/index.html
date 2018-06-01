@@ -1,0 +1,18 @@
+<div ng-app="myApp">
+    <ul class="menu">
+        <li><a ui-sref="group.overview">uiSrefOverview</a></li>
+        <li><a  ng-click="goOver()">ngClickOverview</a></li>
+        <li><a ui-sref="group.projects">Projects</a></li>
+        <li><a ui-sref="group.tasks">Tasks</a></li>
+        <li><a ui-sref="group.discussions">Discussions</a></li>
+        <li><a ui-sref="group.members">Members</a></li>
+    </ul>
+
+    <div ui-view></div>
+</div>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>-->
+<script src="../../node_modules/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../node_modules/angular-ui-router/release/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../node_modules/ui-router-extras/release/ct-ui-router-extras.js"></script>
+
+<script src="./index.js" type="text/javascript" charset="utf-8"></script>

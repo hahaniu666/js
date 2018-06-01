@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.6",
+    "angular-ui-router": "^0.4.3",
     "angular-ui-sortable": "^0.17.2",
     "arteditor": "^1.0.3",
     "clipboard": "^1.7.1",
@@ -20,5 +21,8 @@
     "layui-src": "^2.2.1",
     "muiv3": "^3.3.0",
     "wangeditor": "2.1.23"
+  },
+  "devDependencies": {
+    "ui-router-extras": "^0.1.3"
   }
 }
